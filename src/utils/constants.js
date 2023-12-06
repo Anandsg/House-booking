@@ -1,0 +1,1 @@
+export const No_PIC_URL = "https://www.nestaway.com/assets/no_pic.jpg"
