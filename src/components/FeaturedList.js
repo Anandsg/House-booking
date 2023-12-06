@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { No_PIC_URL } from '../utils/constants';
+import { API_URL, No_PIC_URL } from '../utils/constants';
 import { useNavigate } from 'react-router-dom';
 
 const FeaturedList = () => {
@@ -13,7 +13,7 @@ const FeaturedList = () => {
     const getHousesList = async () => {
         try {
             const response = await fetch(
-                "https://mocki.io/v1/c1b8d087-971c-472f-870c-47185f710c17"
+                API_URL
             );
             const data = await response.json();
             setHouses(data.houses);
@@ -45,8 +45,8 @@ const FeaturedList = () => {
                     <button
                         className='bg-blue-200 py-2 p-2 m-4 rounded-md text-sm hover:bg-blue-300 focus:outline-none focus:ring'
                         onClick={() => handleViewDetails(house.id)}>
-
-                        View details</button>
+                        View details
+                    </button>
                 </div>
             ))}
         </div>
