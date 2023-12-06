@@ -2,9 +2,7 @@ import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import Properties from './properties/Properties';
-import Houses from './houses/Houses';
-
-
+import HouseDetails from './houses/HouseDetails';
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -18,7 +16,7 @@ const App = () => {
     },
     {
       path: '/properties/:id',
-      element: <Houses />
+      element: <HouseDetails />
     }
   ])
   return (
