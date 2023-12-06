@@ -13,7 +13,7 @@ const Home = () => {
             <Body />
             <div className='justify-center flex-row text-center'>
                 <Featured />
-                <h1 className='text-xl font-semibold justify-start flex mx-32'>
+                <h1 className='md:text-xl font-semibold justify-start flex mx-20 md:mx-32'>
                     Browse by property type
                 </h1>
                 <FeaturedList />

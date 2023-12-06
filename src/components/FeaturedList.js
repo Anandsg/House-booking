@@ -36,7 +36,7 @@ const FeaturedList = () => {
                 house.image_url && house.image_url !== No_PIC_URL &&
                 <div className='text-sm shadow-lg hover:cursor-pointer hover:shadow-xl'
                     key={house.id}>
-                    <img className='w-60 h-40 m-4 rounded-lg' src={house.image_url} alt={house.title} />
+                    <img className=' md:w-60 h-40 m-4 rounded-lg' src={house.image_url} alt={house.title} />
                     <div className='flex justify-between mx-5'>
                         <h3 className=''>{house.title}</h3>
                         <p className=''>Rent: ₹{house.rent}</p>

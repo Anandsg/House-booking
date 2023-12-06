@@ -22,15 +22,14 @@ const Body = () => {
     return (
         <div className="flex items-center justify-center space-x-4">
             <input
-                className="border border-gray-300 rounded-md w-3/12 p-2 text-sm focus:outline-none focus:ring"
+                className="border border-gray-300 rounded-md w-64 md:w-3/12 p-2 text-sm focus:outline-none focus:ring"
                 placeholder="Where are you planning your next property?"
             />
-
             <button className="bg-blue-200 p-2 rounded-md text-sm hover:bg-blue-300 focus:outline-none focus:ring">
                 Search
             </button>
 
-            <div className="flex items-center space-x-2 bg-blue-200 p-2 rounded-md">
+            <div className="items-center space-x-2 bg-blue-200 p-2 rounded-md hidden md:inline-block">
                 <FontAwesomeIcon icon={faCalendarDays} className="text-" />
                 <span
                     onClick={toggleDateForm}

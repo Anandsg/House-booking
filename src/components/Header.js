@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className='fle py-4 px-8'>
             <div className='justify-between flex-col'>
-                <p className='text-2xl font-serif py-8'>Rent the smart way with Nestaway!</p>
+                <p className='text-xl md:text-2xl font-serif py-4 md:py-8'>Rent the smart way with Nestaway!</p>
             </div>
             <div className='my-2'>
                 <FontAwesomeIcon icon={faHome} />
