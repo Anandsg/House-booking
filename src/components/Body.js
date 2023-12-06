@@ -4,21 +4,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import { format } from "date-fns"
+import { format } from 'date-fns';
 
 const Body = () => {
-    const [OpenDate, setOpenDate] = useState(false)
+    const [openDate, setOpenDate] = useState(false);
     const [date, setDate] = useState([
         {
             startDate: new Date(),
             endDate: new Date(),
-            key: 'selection'
-        }
+            key: 'selection',
+        },
     ]);
 
     const toggleDateForm = () => {
-        setOpenDate(!OpenDate);
-    }
+        setOpenDate(!openDate);
+    };
+
     return (
         <div className="flex items-center justify-center space-x-4">
             <input
@@ -31,24 +32,24 @@ const Body = () => {
 
             <div className="items-center space-x-2 bg-blue-200 p-2 rounded-md hidden md:inline-block">
                 <FontAwesomeIcon icon={faCalendarDays} className="text-" />
-                <span
-                    onClick={toggleDateForm}
-                    className="bg-blue-200 text-sm cursor-pointer">
-                    {`${format(date[0].startDate, "MM/dd/yyyy")} 
-                    to ${format(date[0].endDate, "MM/dd/yyyy")}`}
+                <span onClick={toggleDateForm} className="bg-blue-200 text-sm cursor-pointer">
+                    {`${format(date[0].startDate, 'MM/dd/yyyy')} to ${format(date[0].endDate, 'MM/dd/yyyy')}`}
                 </span>
             </div>
-            <div className='absolute top-[44%] right-52 '>
-                {OpenDate && <DateRange
-                    className="flex"
-                    editableDateInputs={true}
-                    onChange={(item) => setDate([item.selection])}
-                    moveRangeOnFirstSelection={false}
-                    ranges={date}
-                />}
+
+            <div className="absolute top-[44%] right-52">
+                {openDate && (
+                    <DateRange
+                        className="flex"
+                        editableDateInputs={true}
+                        onChange={(item) => setDate([item.selection])}
+                        moveRangeOnFirstSelection={false}
+                        ranges={date}
+                    />
+                )}
             </div>
         </div>
     );
-}
+};
 
 export default Body;

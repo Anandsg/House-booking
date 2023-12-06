@@ -1,18 +1,14 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
-import Properties from './properties/Properties';
-import HouseDetailsContainer from './houses/HouseDetailsContainer';
+import HouseDetailsContainer from './propertyDetails/HouseDetailsContainer'
+
 
 const App = () => {
   const appRouter = createBrowserRouter([
     {
       path: '/',
       element: <Home />
-    },
-    {
-      path: '/properties',
-      element: <Properties />
     },
     {
       path: '/properties/:id',
